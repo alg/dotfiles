@@ -1,0 +1,8 @@
+-- Autoformat on save
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+--     group = vim.api.nvim_create_augroup("fmt", { clear = true }),
+--     pattern = {"*.go", "*.py"},
+--     callback = function()
+--         vim.lsp.buf.format()
+--     end,
+-- })
