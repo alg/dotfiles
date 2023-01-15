@@ -34,6 +34,9 @@ keymap("n", "N", "Nzzzv", opts)
 -- Keep yank in the buffer
 keymap("v", "p", '"_dP', opts)
 
+-- Removing highlighting on F3
+keymap("n", "<f3>", ":noh<cr>", opts)
+
 -- Buffer Bye
 keymap("n", "<leader>q", ":Bdelete<cr>", opts)
 
