@@ -3,4 +3,4 @@ if not ok then
     return
 end
 
-saga.init_lsp_saga()
+saga.setup {}

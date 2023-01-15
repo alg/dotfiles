@@ -86,17 +86,7 @@ return packer.startup(function(use)
     use "jose-elias-alvarez/null-ls.nvim"   -- LSP diagnostics and code actions
     use "jayp0521/mason-null-ls.nvim"       -- simple to use null ls components installer
     use "lukas-reineke/lsp-format.nvim"     -- async LSP-based formating
-    use({
-        "glepnir/lspsaga.nvim",
-        branch = "main",
-        config = function()
-            local saga = require("lspsaga")
-
-            saga.init_lsp_saga({
-                -- your configuration
-            })
-        end,
-    })
+    use "glepnir/lspsaga.nvim"              -- adds popups and other LS goodies
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"
