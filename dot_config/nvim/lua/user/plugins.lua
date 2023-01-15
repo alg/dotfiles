@@ -46,6 +46,7 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim"             -- Useful lua functions used by lots of plugins
     use "windwp/nvim-autopairs"             -- Auto-closes parens, brackets, quotes etc
     use "numToStr/Comment.nvim"             -- commenting lines and blocks
+    use { "kylechui/nvim-surround", tag = "*" } -- Surrounding code
     use { "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons" } }
     use "akinsho/toggleterm.nvim"
     use "moll/vim-bbye"                     -- Close buffers w/o closing windows (adds :Bdelete and :Bwipeout)
