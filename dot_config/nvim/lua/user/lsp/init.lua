@@ -23,7 +23,7 @@ lspconfig.gopls.setup {
 }
 
 lspconfig.solargraph.setup {
-    on_attach = on_attach,
+    on_attach = keymaps.on_attach,
 	  flags = {
 	      debounce_text_changes = 150,
 	  },
