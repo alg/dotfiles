@@ -1,8 +1,8 @@
-require "user.colorscheme"
 require "user.options"
 
 -- plugin configuration
 require "user.plugins"
+require "user.colorscheme"
 require "user.autocmds"
 require "user.lsp"
 
