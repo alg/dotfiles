@@ -1,10 +1,13 @@
 return {
     "nvim-telescope/telescope.nvim",
 
+	dependencies = { "folke/trouble.nvim" },
+
     config = function()
         local telescope = require("telescope")
         local actions = require("telescope.actions")
-        local previewers = require('telescope.previewers')
+        local previewers = require("telescope.previewers")
+		local trouble = require("trouble.providers.telescope")
 
         local _bad = { '.*%.json', '.*%.js' } -- Put all filetypes that slow you down in this array
         local bad_files = function(filepath)
@@ -52,7 +55,7 @@ return {
                         ["<CR>"] = actions.select_default,
                         ["<C-x>"] = actions.select_horizontal,
                         ["<C-v>"] = actions.select_vertical,
-                        ["<C-t>"] = actions.select_tab,
+                        ["<C-t>"] = trouble.open_with_trouble,
 
                         ["<C-u>"] = actions.preview_scrolling_up,
                         ["<C-d>"] = actions.preview_scrolling_down,
@@ -73,7 +76,7 @@ return {
                         ["<CR>"] = actions.select_default,
                         ["<C-x>"] = actions.select_horizontal,
                         ["<C-v>"] = actions.select_vertical,
-                        ["<C-t>"] = actions.select_tab,
+                        ["<C-t>"] = trouble.open_with_trouble,
 
                         ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
                         ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
