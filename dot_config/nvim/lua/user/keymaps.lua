@@ -48,7 +48,6 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Toggleterm
 keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", opts)
-keymap("n", "<leader>tf", [[:TermExec cmd="make test" exit_on_close=false direction=float size=50<CR>]], opts)
 
 -- Bufferline
 keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
