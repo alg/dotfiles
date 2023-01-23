@@ -1,0 +1,17 @@
+# Basic configuration
+. $ZDOTDIR/config
+. $ZDOTDIR/env
+. $ZDOTDIR/aliases
+
+# Autoload functions
+fpath=($ZDOTDIR/functions $fpath)
+autoload -Uz $fpath[1]/*(.:t)
+
+# Source eveything in conf.d
+for _rcfile in $ZDOTDIR/conf.d/*.zsh(.N); do
+  source "$_rcfile"
+done
+unset _rcfile
+
+# Local settings
+[[ -f $ZDOTDIR/.zshrc_local ]] && source "$ZDOTDIR/.zshrc_local"

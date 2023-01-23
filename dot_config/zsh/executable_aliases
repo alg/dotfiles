@@ -1,0 +1,31 @@
+# Shell
+alias h="history"
+
+# Git
+alias g="git status"
+alias gco="git checkout"
+alias gbr="git branch"
+alias ga="git add"
+function gg {
+  git commit -v -a -m "$*"
+}
+
+# Rails
+alias rr='rake routes'
+alias rmig='rake db:migrate'
+alias rrol='rake db:rollback'
+
+# Tmux
+alias tmux='TERM=xterm-256color tmux'
+alias mux=tmuxinator
+
+# Timewarrior
+alias tw=timew
+alias tws='timew summary :ids'
+alias tww='timew worklog :month'
+alias twsm='timew summary :ids :month'
+
+# Rubocop
+alias rubocop-staged='rubocop -a `git diff --name-only --cached --diff-filter=d | grep '\.rb'`'
+alias reek-staged='reek `git diff --name-only --cached --diff-filter=d | grep '\.rb'`'
+alias audit-staged='rubocop-staged && reek-staged'
