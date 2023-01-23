@@ -41,7 +41,7 @@ fpath=(./completions $fpath)
 zstyle ":completion:*:commands" rehash 1
 
 autoload -Uz compinit
-if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' $ZDOTDIR/.zcompdump) ]; then
   compinit
 else
   compinit -C
