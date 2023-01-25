@@ -8,7 +8,6 @@ return {
     config = function()
         require("nvim-treesitter.configs").setup {
             ensure_installed = {                -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
-                "fish",
                 "lua",
                 "css",
                 "dockerfile",
