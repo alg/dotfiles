@@ -35,8 +35,13 @@ vim.opt.sidescrolloff = 7
 vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 
 vim.opt.shortmess:append "c"
-
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+vim.opt.iskeyword:append('-')
+vim.opt.whichwrap:append {
+    ['<'] = true,
+    ['>'] = true,
+    ['['] = true,
+    [']'] = true,
+    ['h'] = true,
+    ['l'] = true,
+}
 
