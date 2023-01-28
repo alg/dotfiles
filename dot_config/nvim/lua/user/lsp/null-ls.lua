@@ -5,13 +5,13 @@ end
 
 local masonok, mason_null_ls = pcall(require, "mason-null-ls")
 if masonok then
-  mason_null_ls.setup {
-    automatic_setup = {
-      types = {
-        rubocop = { 'formatting' },
-      }
-    }
-  }
+	mason_null_ls.setup {
+		automatic_setup = {
+			types = {
+				rubocop = { 'formatting' },
+			}
+		}
+	}
 end
 
 local formatting = null_ls.builtins.formatting
@@ -29,5 +29,5 @@ null_ls.setup {
 }
 
 if masonok then
-  mason_null_ls.setup_handlers()
+	mason_null_ls.setup_handlers()
 end
