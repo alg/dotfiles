@@ -22,11 +22,9 @@ null_ls.setup {
     on_attach = require("user.lsp.format").on_attach,
 
     sources = {
-        -- formatting.yapf,
         formatting.black,
-        -- diagnostics.flake8,
+        diagnostics.ruff,
         formatting.golines.with({ extra_args = { "-m", "120" }}),
-        -- null_ls.builtins.code_actions.gitsigns,
     }
 }
 
