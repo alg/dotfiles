@@ -3,18 +3,6 @@ return {
     "nvim-lua/plenary.nvim",             -- Useful lua functions used by lots of plugins
     "moll/vim-bbye",                     -- Close buffers w/o closing windows (adds :Bdelete and :Bwipeout)
 
-    -- Which key helper
-    -- {
-    --     "folke/which-key.nvim",
-    --     config = {
-    --         presets = {
-    --             operators = true,
-    --             motions = true,
-    --             g = true,
-    --         },
-    --     }
-    -- },
-
     -- Color schemes
     "lunarvim/darkplus.nvim",
 
