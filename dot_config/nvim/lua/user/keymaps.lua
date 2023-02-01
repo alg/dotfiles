@@ -44,7 +44,10 @@ keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 
 -- Nvim Tree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+-- keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>ee", ":Neotree toggle<CR>", opts)
+keymap("n", "<leader>ef", ":Neotree reveal_file=%<CR>", opts)
+keymap("n", "<leader>eg", ":Neotree float git_status<CR>", opts)
 
 -- Toggleterm
 keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", opts)
