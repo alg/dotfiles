@@ -18,6 +18,10 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
+-- Navigating through visible lines in soft wrap
+vim.cmd [[ nnoremap <expr> k (v:count == 0 ? 'gk' : 'k') ]]
+vim.cmd [[ nnoremap <expr> j (v:count == 0 ? 'gj' : 'j') ]]
+
 -- jk in insert mode == ESC
 keymap("i", "jk", "<ESC>", opts)
 
