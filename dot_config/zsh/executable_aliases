@@ -1,5 +1,6 @@
 # Shell
 alias h="history"
+alias ll="ls -al --color=auto"
 
 # Git
 alias g="git status"
@@ -29,3 +30,10 @@ alias twsm='timew summary :ids :month'
 alias rubocop-staged='rubocop -a `git diff --name-only --cached --diff-filter=d | grep '\.rb'`'
 alias reek-staged='reek `git diff --name-only --cached --diff-filter=d | grep '\.rb'`'
 alias audit-staged='rubocop-staged && reek-staged'
+
+# Dev envs
+alias dev-up='docker-compose -f .dev/docker-compose.yml up -d'
+alias dev-stop='docker-compose -f .dev/docker-compose.yml stop'
+alias dev-down='docker-compose -f .dev/docker-compose.yml down'
+alias dev-build='docker-compose -f .dev/docker-compose.yml build app'
+alias dev-edit='dev-up; docker-compose -f .dev/docker-compose.yml exec -it app nvim'

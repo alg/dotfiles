@@ -8,10 +8,6 @@ setopt prompt_subst
 # Set RPROMPT to have info show up on the right, too.
 set RPROMPT=''
 
-# ???#
-setopt CORRECT
-setopt CORRECTALL
-
 # History
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
@@ -52,3 +48,7 @@ zstyle ':completion:*' menu select=2
 
 # Make CTRL-W delete after other chars, not just spaces
 WORDCHARS=${WORDCHARS//[&=\/;\!#%\{]}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
