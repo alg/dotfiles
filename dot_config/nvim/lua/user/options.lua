@@ -45,3 +45,11 @@ vim.opt.whichwrap:append {
     ['l'] = true,
 }
 
+-- autoload project-level config on VimEnter
+local load_project_config = function()
+    local nvimrc = "./.nvim.lua"
+    if vim.fn.filereadable(nvimrc) == 1 then
+        vim.cmd("source " .. nvimrc)
+    end
+end
+vim.api.nvim_create_autocmd({"VimEnter"}, {callback=load_project_config})
