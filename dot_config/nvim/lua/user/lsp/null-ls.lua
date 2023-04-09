@@ -23,15 +23,16 @@ null_ls.setup({
 	on_attach = require("user.lsp.format").on_attach,
 
 	sources = {
+    -- python
 		formatting.black,
 		diagnostics.ruff,
+
+    -- golang
 		formatting.golines.with({ extra_args = { "-m", "120" } }),
+
+    -- ruby
 		formatting.rubocop,
 		diagnostics.rubocop,
 		diagnostics.reek,
 	},
 })
-
-if masonok then
-	mason_null_ls.setup_handlers()
-end
