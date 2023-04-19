@@ -22,9 +22,15 @@ lspconfig.gopls.setup({
 	on_attach = on_attach,
 })
 
+lspconfig.rust_analyzer.setup({
+    on_attach = on_attach,
+})
+
 local ok, mason = pcall(require, "mason")
 if ok then
-	mason.setup({})
+	mason.setup {
+        PATH = "append",
+    }
 end
 
 require("user.lsp.null-ls")
