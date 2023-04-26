@@ -14,6 +14,7 @@ return {
                 "go",
                 "gomod",
                 "html",
+                "http",
                 "javascript",
                 "json",
                 "make",
