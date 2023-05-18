@@ -3,7 +3,6 @@ local term_opts = { silent = true }
 
 local keymap = vim.api.nvim_set_keymap
 
-
 -- Modes
 -- n - normal
 -- i - insert
@@ -24,6 +23,7 @@ vim.cmd [[ nnoremap <expr> j (v:count == 0 ? 'gj' : 'j') ]]
 
 -- jk in insert mode == ESC
 keymap("i", "jk", "<ESC>", opts)
+keymap("n", "<leader>ww", ":w<CR>", opts)
 
 -- Centering on navigation and search
 keymap("n", "<C-u>", "<C-u>zz", opts)
