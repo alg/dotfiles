@@ -1,5 +1,6 @@
 return {
     "zbirenbaum/copilot.lua",
+	build = ":Copilot auth",
     cmd = "Copilot",
     event = "InsertEnter",
     config = {
@@ -18,19 +19,21 @@ return {
                 ratio = 0.4
             },
         },
+
         suggestion = {
             enabled = true,
             auto_trigger = true,
             debounce = 75,
             keymap = {
-                accept = "<M-l>",
+                accept = "<M-k>",
                 accept_word = false,
                 accept_line = false,
-                next = "<M-]>",
-                prev = "<M-[>",
-                dismiss = "<C-]>",
+                next = "<M-l>",
+                prev = "<M-j>",
+                dismiss = "<C-l>",
             },
         },
+
         filetypes = {
             yaml = false,
             markdown = false,
@@ -40,6 +43,7 @@ return {
             hgcommit = false,
             ["."] = false,
         },
+
         copilot_node_command = 'node', -- Node.js version must be > 16.x
         server_opts_overrides = {},    
     },

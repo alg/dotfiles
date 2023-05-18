@@ -5,6 +5,7 @@ return {
 
     dependencies = { 'nvim-tree/nvim-web-devicons', opt = true },
 
+    event = "VeryLazy",
     config = {},
 }
 
