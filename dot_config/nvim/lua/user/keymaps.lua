@@ -31,6 +31,12 @@ keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
+-- Navigating windows
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+
 -- Keep yank in the buffer
 keymap("v", "p", '"_dP', opts)
 
