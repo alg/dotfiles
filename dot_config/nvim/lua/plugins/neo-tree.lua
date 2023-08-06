@@ -1,13 +1,13 @@
 return {
     "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
+    branch = "v3.x",
     dependencies = { 
         "nvim-lua/plenary.nvim",
         "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
         "MunifTanjim/nui.nvim",
         
         -- for support of "_with_window_picker" suffix in actions
-        "s1n7ax/nvim-window-picker",
+        -- "s1n7ax/nvim-window-picker",
     },
 
     config = function()
@@ -20,14 +20,19 @@ return {
             window = {
                 mappings = {
                     ['<bs>'] = 'close_node',
+                    ['<s-bs>'] = 'navigate_up',
                     ['<leader>e'] = 'close_window',
-                    ['<cr>'] = 'open_with_window_picker',
-                    ['<c-v>'] = 'vsplit_with_window_picker',
+                    -- ['<cr>'] = 'open_with_window_picker',
+                    ['<cr>'] = 'open',
+                    -- ['<c-v>'] = 'vsplit_with_window_picker',
+                    ['<c-v>'] = 'open_vsplit',
                 },
             },
 
             filesystem = {
-                follow_current_file = true,
+                follow_current_file = {
+                    enabled = true,
+                },
             },
 
             renderers = {
