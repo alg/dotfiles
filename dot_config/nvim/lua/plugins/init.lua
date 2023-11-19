@@ -26,5 +26,5 @@ return {
     "jose-elias-alvarez/null-ls.nvim",   -- LSP diagnostics and code actions
     "jayp0521/mason-null-ls.nvim",       -- simple to use null ls components installer
     "lukas-reineke/lsp-format.nvim",     -- async LSP-based formating
-    "glepnir/lspsaga.nvim",              -- adds popups and other LS goodies
+    "nvimdev/lspsaga.nvim",              -- adds popups and other LS goodies
 }
