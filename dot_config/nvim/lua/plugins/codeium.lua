@@ -5,5 +5,7 @@ return {
         vim.keymap.set('i', '<M-j>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
         vim.keymap.set('i', '<M-l>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
         vim.keymap.set('i', '<M-,>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+
+        vim.g.codeium_no_map_tab = 1
     end
 }
