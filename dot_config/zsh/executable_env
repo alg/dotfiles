@@ -1,6 +1,7 @@
 export LC_ALL=en_US.UTF-8
 export PAGER="less -SF"
 export EDITOR=nvim
+export BROWSER=open
 
 export PATH=$HOME/.bin:$PATH
 
