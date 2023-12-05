@@ -60,7 +60,15 @@ keymap("n", "<leader>ef", ":Neotree reveal_file=%<CR>", opts)
 keymap("n", "<leader>eg", ":Neotree float git_status<CR>", opts)
 
 -- Toggleterm
-keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", opts)
+keymap("n", "<leader>tg", "<cmd>lua _lazygit_toggle()<CR>", opts)
+keymap("n", "<leader>tm", "<cmd>lua _neomutt_toggle()<CR>", opts)
+
+local ok, miniclue = pcall(require, "mini.clue")
+if ok then
+    miniclue.set_mapping_desc('n', '<Space>tg', 'lazygit')
+    miniclue.set_mapping_desc('n', '<Leader>tm', 'neomutt')
+end
+
 
 -- Bufferline
 keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)

@@ -26,9 +26,14 @@ return {
 
         -- lazygit
         local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
-
         function _lazygit_toggle()
           lazygit:toggle()
+        end
+
+        -- neomutt
+        local neomutt = Terminal:new({ cmd = "neomutt", hidden = true, direction = "float" })
+        function _neomutt_toggle()
+          neomutt:toggle()
         end
     end
 }
