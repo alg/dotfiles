@@ -28,22 +28,20 @@ set_tmux_option() {
 
 main() {
   IFS=\;
-  local paths=$(get_tmux_option "@maildir_paths" "")
+  local maildirs=$(get_tmux_option "@maildir_paths" "")
   local template=$(get_tmux_option "@maildir_template" "")
 
-  if [ -z "$paths" ] || [ -z "$template" ]
+  if [ -z "$maildirs" ] || [ -z "$template" ]
   then
-    echo "no paths or template"
+    echo "no maildirs or template"
     exit
   fi
 
-  local paths_array=($paths)
   local index=1
 
-  for path in $paths;
+  for maildir in $maildirs;
   do
-    local maildir="$path"
-    local count=0
+    local count="?"
 
     if [ -d "$maildir" ]
     then
