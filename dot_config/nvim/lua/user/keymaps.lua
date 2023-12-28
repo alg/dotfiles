@@ -2,6 +2,7 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
 local keymap = vim.api.nvim_set_keymap
+local has_miniclue, miniclue = pcall(require, "mini.clue")
 
 -- Modes
 -- n - normal
@@ -53,18 +54,24 @@ keymap("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 
--- Nvim Tree
+-- Neo Tree
 -- keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>ee", ":Neotree toggle<CR>", opts)
+keymap("n", "<leader>eb", ":Neotree buffers<CR>", opts)
 keymap("n", "<leader>ef", ":Neotree reveal_file=%<CR>", opts)
 keymap("n", "<leader>eg", ":Neotree float git_status<CR>", opts)
+if has_miniclue then
+    miniclue.set_mapping_desc('n', '<Leader>ee', 'Neotree toggle')
+    miniclue.set_mapping_desc('n', '<Leader>eb', 'Neotree buffers')
+    miniclue.set_mapping_desc('n', '<Leader>ef', 'Neotree reveal file')
+    miniclue.set_mapping_desc('n', '<Leader>eg', 'Neotree git status')
+end
 
 -- Toggleterm
 keymap("n", "<leader>tg", "<cmd>lua _lazygit_toggle()<CR>", opts)
 keymap("n", "<leader>tm", "<cmd>lua _neomutt_toggle()<CR>", opts)
 
-local ok, miniclue = pcall(require, "mini.clue")
-if ok then
+if has_miniclue then
     miniclue.set_mapping_desc('n', '<Space>tg', 'lazygit')
     miniclue.set_mapping_desc('n', '<Leader>tm', 'neomutt')
 end
