@@ -29,6 +29,14 @@ return {
                 },
             },
 
+            buffers = {
+                window = {
+                    mappings = {
+                        ['d'] = 'buffer_delete',
+                    },
+                },
+            },
+
             filesystem = {
                 follow_current_file = {
                     enabled = false,
