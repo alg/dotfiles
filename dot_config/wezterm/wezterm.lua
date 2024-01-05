@@ -12,9 +12,13 @@ end
 
 -- This is where you actually apply your config choices
 
+config.color_scheme = 'Catppuccin Mocha'
+
+-- Font
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
 config.font_size = 16.0
 
+-- Window
 config.window_padding = {
     left = '2px',
     right = '2px',
