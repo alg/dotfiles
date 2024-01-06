@@ -11,7 +11,6 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
-
 config.color_scheme = 'Catppuccin Mocha'
 
 -- Font
@@ -19,6 +18,7 @@ config.font = wezterm.font 'JetBrainsMono Nerd Font'
 config.font_size = 16.0
 
 -- Window
+config.window_decorations = 'RESIZE'
 config.window_padding = {
     left = '2px',
     right = '2px',
@@ -28,8 +28,6 @@ config.window_padding = {
 
 config.use_fancy_tab_bar = false
 
--- For example, changing the color scheme:
--- config.color_scheme = 'AdventureTime'
 
 -- and finally, return the configuration to wezterm
 return config
