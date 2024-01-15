@@ -44,3 +44,7 @@ export PATH=$PATH:/usr/local/opt/ansible/bin/
 
 # rbenv
 export PATH=$HOME/.rbenv/shims:$PATH
+
+# OpenSSL headers and lib for building libraries with it
+export LDFLAGS="-I/opt/homebrew/opt/openssl@3/include -L/opt/homebrew/opt/openssl@3/lib"
+
