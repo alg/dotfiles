@@ -28,6 +28,12 @@ config.window_padding = {
 
 config.use_fancy_tab_bar = false
 
+-- Key mappings
+config.keys = {
+    -- split panes
+    { key = 'd', mods = 'CMD', action = wezterm.action { SplitHorizontal = { domain = 'CurrentPaneDomain' } } },
+    { key = 'D', mods = 'CMD|SHIFT', action = wezterm.action { SplitVertical = { domain = 'CurrentPaneDomain' } } },
+}
 
 -- and finally, return the configuration to wezterm
 return config
