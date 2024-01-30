@@ -1,5 +1,5 @@
 export LC_ALL=en_US.UTF-8
-export PAGER="less -SF"
+export PAGER="less -S"
 export EDITOR=nvim
 export BROWSER=open
 
