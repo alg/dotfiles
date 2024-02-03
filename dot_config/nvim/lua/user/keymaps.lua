@@ -45,7 +45,13 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "<f3>", ":noh<cr>", opts)
 
 -- Buffer Bye
-keymap("n", "<leader>q", ":Bdelete<cr>", opts)
+keymap("n", "<leader>qq", ":Bdelete<cr>", opts)
+keymap("n", "<leader>qo", ":BufferLineCloseOthers<cr>", opts)
+
+if has_miniclue then
+    miniclue.set_mapping_desc('n', '<leader>qq', 'Delete buffer')
+    miniclue.set_mapping_desc('n', '<leader>qo', 'Delete other buffers')
+end
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = true }))<cr>", opts)
