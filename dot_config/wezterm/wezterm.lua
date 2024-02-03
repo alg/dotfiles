@@ -27,6 +27,7 @@ config.window_padding = {
 }
 
 config.use_fancy_tab_bar = false
+config.show_new_tab_button_in_tab_bar = false
 
 -- Key mappings
 config.keys = {
