@@ -77,7 +77,6 @@ return {
             ---
             ---```
             ---@see vim.keymap.set
-            keybinds = {},
         })
     end
 }

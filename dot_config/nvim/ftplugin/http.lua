@@ -1,5 +1,2 @@
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
-
--- Testing
-keymap("n", "<leader>r", "<cmd>lua require('rest-nvim').run()<cr>", opts)
+vim.keymap.set("n", "<leader>rr", "<cmd>Rest run<cr>", { buffer = true, desc = 'Run request under cursor' })
+vim.keymap.set("n", "<leader>rl", "<cmd>Rest run last<cr>", { buffer = true, desc = 'Re-run last request' })
